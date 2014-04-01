@@ -8,10 +8,12 @@ $host = "localhost";
 
 // Gebruikersnaam en wachtwoord. In XAMPP kan je je gebruikersnaam nagaan op de startpagina van
 // PHPMyAdmin, onder 'MySQL' bij 'Gebruiker'.
+$user = 'root';
+$pass = 'root';
 
-
-// --- Plaats hier je code die er voor zorgt dat er verbinding wordt gemaakt met de database.
-
+// --- Code die er voor zorgt dat er verbinding wordt gemaakt met de database.
+$conn = mysql_connect($host, $user, $pass) or die('Não pode conectar ao database :(');
+mysql_select_db('luchtvaart');
 
 // Helpfunctie om GET-variabele <$name> op te vragen en speciale karakters te geschikt te maken
 // voor gebruik in SQL-query (om SQL injection te voorkomen)

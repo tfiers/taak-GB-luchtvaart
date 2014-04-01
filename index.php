@@ -12,12 +12,9 @@
 	require("top.inc");
 ?>
 
-Dit is een web-pagina.<br /><br />
-<?php print "Dit is een stuk PHP code.<br />"; ?>
-
-<?php
-	//Plaats hier je code
-?>.
+<p>Winnend lot:</p>
+<?php print rand(1, 20); ?>
+<p>U mag uw prijs komen ophalen in /prijs</p>
 
 <?php
 // Voer de inhoud van "bottom.inc" uit. Dit sluit de pagina af

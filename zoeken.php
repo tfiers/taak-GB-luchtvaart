@@ -10,15 +10,24 @@
 	require("top.inc");
 ?>
 
-<!-- Dit is het formulier om te zoeken op aantal stops: -->
 <form action="zoekopaantalstops.php">
-<em>aantal stops:</em> <input type="text" name="aantalstops" length="2"/><br />
-
-<!-- De knop waarop de gebruiker kan klikken. -->
-<input type="submit" value="Zoek op aantal stops"/>
+<em>Aantal stops:</em><br />
+<input type="text" name="aantalstops" length="2"/><br />
+<input type="submit"/>
 </form>
-
-<!-- Voeg hier je code toe -->
+<br />
+<form action="zoekopvertrektijd.php">
+<em>Vertrekdatum (vb: "2009-11-23"):</em><br />
+<input type="text" name="datum"/><br />
+<input type="submit" label="Zoek"/>
+</form>
+<br />
+<form action="zoekopoorsprong.php">
+<em>Naam luchthaven van vertrek:</em><br />
+<input type="text" name="oorsprong"/><br />
+<input type="submit"/>
+</form>
+<br />
 
 <?php
 // Dit sluit de verbinding met de gegevensbank en de pagina af.

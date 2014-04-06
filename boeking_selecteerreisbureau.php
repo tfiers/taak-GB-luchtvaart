@@ -12,9 +12,19 @@
 
 <!-- Dit is het formulier om de klant in te geven: -->
 <form action="boeking_selecteerklant.php">
-
 <!-- Voeg hier je code toe -->
-
+<em>Reisbureau:</em>
+<select name="reisbureau">
+<?php
+	$query = "SELECT * FROM Reisbureau";
+	$resultaat = mysql_query($query) or die("Kan de lijst van klanten niet opvragen: " . mysql_error());
+	while($rij = mysql_fetch_assoc($resultaat)) {
+		$adres = implode(" ", array_values($rij));
+		echo "<option value=\"".$rij['Reisbureau_ID']."\">".$adres."</option>";
+	}
+?>
+</select>
+<input type="submit" value="Selecteer" />
 </form>
 
 <?php

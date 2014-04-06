@@ -10,6 +10,13 @@
 	require("top.inc");
 
 // Implementeer je code hier.
+$naam = explode(",", gebruikersInvoer('naam'));
+mysql_query("UPDATE klant SET Straat='".gebruikersInvoer('straat')."', Nummer=".gebruikersInvoer('nummer')." ".
+			"WHERE Voornaam='".$naam[0]."' and Familienaam='".$naam[1]."';")
+	or die("Database fout: ".mysql_error());
+?>
+
+owkidowki
 
 <?php
 // Dit sluit de verbinding met de gegevensbank en de pagina af.
